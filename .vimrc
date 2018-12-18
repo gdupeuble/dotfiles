@@ -2,14 +2,13 @@
 " Use Vim settings, rather than Vi settings.
 set nocompatible
 
+colorscheme desert
+
 set history=50 "command line history
 set ruler      "show cursor position all the time
 set showcmd    "display incomplete commands
 set incsearch  "do inc searching
 set hlsearch
-if has('mouse')
-  set mouse=a
-endif
 
 " Leader key
 let mapleader = "ù"
@@ -40,10 +39,16 @@ nnoremap H ^
 nnoremap L $
 
 " Indentation
-set expandtab
+set expandtab " on pressing tab, insert 4 spaces
 set shiftwidth=4
 set softtabstop=4
 set smartindent
+
+set diffopt=vertical
+
+" put all files in a backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 " }}}
 
 " Edit MYVIMRC {{{
@@ -51,12 +56,11 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 
-" Abbreviations {{{
-iabbrev @@ gaetan.dupeuble@clearsy.com
-" }}}
-
-" Abbreviations {{{
-
+" Vimscript file settings {{{
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
 " }}}
 
 " FileType comments {{{
@@ -68,9 +72,16 @@ autocmd!
 augroup END
 " }}}
 
-" Vimscript file settings {{{
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
+" Abbreviations {{{
+iabbrev @@ gaetan.dupeuble@clearsy.com
+" }}}
+
+" Pathogen {{{
+execute pathogen#infect()
+call pathogen#helptags()
+" }}}
+
+" NerdTree {{{
+" NerdTree toggle on F10
+noremap <F10> :NERDTreeToggle<CR>
 " }}}
