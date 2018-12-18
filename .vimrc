@@ -47,12 +47,12 @@ set smartindent
 " }}}
 
 " Edit MYVIMRC {{{
-:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-:nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 
 " Abbreviations {{{
-:iabbrev @@ gaetan.dupeuble@clearsy.com
+iabbrev @@ gaetan.dupeuble@clearsy.com
 " }}}
 
 " Abbreviations {{{
@@ -62,15 +62,15 @@ set smartindent
 " FileType comments {{{
 augroup comments
 autocmd!
-  :autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
-  :autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
-  :autocmd FileType c          nnoremap <buffer> <localleader>c I//<esc>
+  autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+  autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
+  autocmd FileType c          nnoremap <buffer> <localleader>c I//<esc>
 augroup END
 " }}}
 
 " Vimscript file settings {{{
 augroup filetype_vim
-  :autocmd!
-  :autocmd FileType vim setlocal foldmethod=marker
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
