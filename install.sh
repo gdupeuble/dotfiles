@@ -16,7 +16,6 @@ git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 # link and source .vimrc
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 ln -s $DIR/.vimrc ~/.vimrc
-source ~/.vimrc
 
 # run helptags
 vim -u NONE -c "Helptags" -c -q
