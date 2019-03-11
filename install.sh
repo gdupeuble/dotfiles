@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#-------------------------------------------------------------
+#                       VIM configuration
+#-------------------------------------------------------------
 # install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -19,3 +22,10 @@ ln -s $DIR/.vimrc ~/.vimrc
 
 # run helptags
 vim -u NONE -c "Helptags" -c -q
+
+#-------------------------------------------------------------
+#                       VIM configuration
+#-------------------------------------------------------------
+# link and source .gitconfig
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+ln -s $DIR/.gitconfig ~/.gitconfig

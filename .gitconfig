@@ -1,0 +1,16 @@
+[user]
+	email = gaetan.dupeuble@clearsy.com
+	name = Gaetan Dupeuble
+[core]
+	autocrlf = false
+	fileMode = false
+	editor = /usr/bin/vim
+[pull]
+	ff = only
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+        dss = diff --shortstat
+        rb = rebase
