@@ -85,3 +85,8 @@ call pathogen#helptags()
 " NerdTree toggle on F10
 noremap <F10> :NERDTreeToggle<CR>
 " }}}
+
+" Useful Remap {{{
+    " remove all trailing whitespace in file
+noremap <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :nohl <Bar> :unlet _s <CR>
+" }}}
