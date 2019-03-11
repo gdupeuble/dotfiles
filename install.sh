@@ -18,6 +18,7 @@ git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 
 # link and source .vimrc
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+mv ~/.vimrc ~/.vimrc.bak
 ln -s $DIR/.vimrc ~/.vimrc
 
 # run helptags
@@ -28,4 +29,5 @@ vim -u NONE -c "Helptags" -c -q
 #-------------------------------------------------------------
 # link and source .gitconfig
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+mv ~/.gitconfig ~/.gitconfig.bak
 ln -s $DIR/.gitconfig ~/.gitconfig
