@@ -8,13 +8,19 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # install NerdTree
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+if ! [[ -d ~/.vim/bundle/nerdtree ]]; then
+    git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi
 
 # install vim-airline
-git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+if ! [[ -d ~/.vim/bundle/vim-airline ]]; then
+    git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+fi
 
 # install vim-fugitive
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+if ! [[ -d ~/.vim/bundle/vim-fugitive ]]; then
+    git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
+fi
 
 # link and source .vimrc
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
