@@ -1,7 +1,18 @@
 # bash aliases
 # -- git --
+alias got='git'
 alias gka='gitk --all'
 alias groot='cd $(git rev-parse --show-toplevel)'
+
+# -- cd --
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# -- vim --
+alias vi='vim'
 
 # -- xampp --
 alias lampp='sudo /opt/lampp/lampp start'
