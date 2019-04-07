@@ -1,6 +1,7 @@
 # bash aliases
 # -- git --
 alias gka='gitk --all'
+alias groot='cd $(git rev-parse --show-toplevel)'
 
 # -- xampp --
 alias lampp='sudo /opt/lampp/lampp start'
