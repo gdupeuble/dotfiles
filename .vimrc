@@ -49,6 +49,12 @@ set diffopt=vertical
 " put all files in a backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
+
+" navigation
+nnoremap <silent> <C-L> :wincmd l<CR>
+nnoremap <silent> <C-K> :wincmd k<CR>
+nnoremap <silent> <C-J> :wincmd j<CR>
+nnoremap <silent> <C-H> :wincmd h<CR>
 " }}}
 
 " Edit MYVIMRC {{{
@@ -89,4 +95,9 @@ noremap <F10> :NERDTreeToggle<CR>
 " Useful Remap {{{
     " remove all trailing whitespace in file
 noremap <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :nohl <Bar> :unlet _s <CR>
+" }}}
+
+" Git rebase remap {{{
+    " replace a word by 'f', meaning fixup
+nnoremap <leader>f cwf<Esc>
 " }}}
