@@ -14,3 +14,5 @@
 	br = branch
         dss = diff --shortstat
         rb = rebase
+        fpt = fetch --prune --tags
+        fe = fetch
