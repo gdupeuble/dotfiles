@@ -101,7 +101,11 @@ noremap <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Git rebase remap {{{
     " replace a word by 'f', meaning fixup
-nnoremap <leader>f cwf<Esc>
+nnoremap <leader>f ciwf<Esc>
+    " replace a word by 'r', meaning reword
+nnoremap <leader>r ciwr<Esc>
+    " replace a word by 'e', meaning edit
+nnoremap <leader>f ciwe<Esc>
 " }}}
 
 " Orgmode configuration {{{
