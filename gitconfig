@@ -16,3 +16,5 @@
         rb = rebase
         fpt = fetch --prune --tags
         fe = fetch
+        rh = reset --hard
+        pf = push --force
