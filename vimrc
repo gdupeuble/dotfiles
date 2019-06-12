@@ -105,7 +105,7 @@ nnoremap <leader>f ciwf<Esc>
     " replace a word by 'r', meaning reword
 nnoremap <leader>r ciwr<Esc>
     " replace a word by 'e', meaning edit
-nnoremap <leader>f ciwe<Esc>
+nnoremap <leader>e ciwe<Esc>
 " }}}
 
 " Orgmode configuration {{{
