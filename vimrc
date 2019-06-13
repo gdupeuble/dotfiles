@@ -63,6 +63,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 
 " Vimscript file settings {{{
+filetype plugin indent on
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
