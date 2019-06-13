@@ -18,3 +18,5 @@
         fe = fetch
         rh = reset --hard
         pf = push --force
+[push]
+	default = simple
