@@ -16,7 +16,6 @@ let maplocalleader = ","
 
 " Learn VIM
 inoremap jk <esc>
-inoremap <esc> <nop>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -25,18 +24,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-" Convert current word in uppercase
-inoremap <c-u> <esc>viwUi
-nnoremap <c-u> viwU<esc>
-
-" Surround word in quotes
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
-
-" Travel to the beginning or the end of lines
-nnoremap H ^
-nnoremap L $
 
 " Indentation
 set expandtab " on pressing tab, insert 4 spaces
@@ -50,7 +37,7 @@ set diffopt=vertical
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" navigation
+" navigation between splits
 nnoremap <silent> <C-L> :wincmd l<CR>
 nnoremap <silent> <C-K> :wincmd k<CR>
 nnoremap <silent> <C-J> :wincmd j<CR>
@@ -88,16 +75,13 @@ execute pathogen#infect()
 call pathogen#helptags()
 " }}}
 
-" Toggle bars {{{
-" NerdTree toggle on F10
-noremap <F10> :NERDTreeToggle<CR>
-" Tagbar toggle on F8
-noremap <F8> :TagbarToggle<CR>
-" }}}
-
 " Useful Remap {{{
     " remove all trailing whitespace in file
 noremap <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :nohl <Bar> :unlet _s <CR>
+
+    " Surround word in quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 " }}}
 
 " Git rebase remap {{{
@@ -107,14 +91,4 @@ nnoremap <leader>f ciwf<Esc>
 nnoremap <leader>r ciwr<Esc>
     " replace a word by 'e', meaning edit
 nnoremap <leader>e ciwe<Esc>
-" }}}
-
-" Orgmode configuration {{{
-    " no leading stars
-let g:org_heading_shade_leading_stars = 1
-    " indent text under headings
-let g:org_indent = 1
-    " add some more keywords
-let g:org_todo_keywords = [['TODO', 'WAITING', '|', 'DONE'], ['|', 'CANCELED']]
-let g:org_todo_keyword_faces = [['WAITING',[':foreground cyan',':background black']],['CANCELED', [':foreground red',':background black',':weight bold',':slant italic', ':decoration underline']]]
 " }}}
