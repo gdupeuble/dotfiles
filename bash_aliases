@@ -11,6 +11,14 @@ alias ...='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
+# -- ls --
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias ll='ll alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # -- vim --
 alias vi='vim'
 
