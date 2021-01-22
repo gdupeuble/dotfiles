@@ -16,14 +16,6 @@ let maplocalleader = ","
 
 " Learn VIM
 inoremap jk <esc>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 " Indentation
 set expandtab " on pressing tab, insert 4 spaces
@@ -63,6 +55,7 @@ autocmd!
   autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
   autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
   autocmd FileType c          nnoremap <buffer> <localleader>c I//<esc>
+  autocmd FileType ada        nnoremap <buffer> <localleader>c I--<esc>
 augroup END
 " }}}
 
