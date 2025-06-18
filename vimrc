@@ -14,17 +14,6 @@ set hlsearch
 let mapleader = "ù"
 let maplocalleader = ","
 
-" Learn VIM
-inoremap jk <esc>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Indentation
 set expandtab " on pressing tab, insert 4 spaces
 set shiftwidth=4
