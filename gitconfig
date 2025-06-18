@@ -18,5 +18,6 @@
         fe = fetch
         rh = reset --hard
         pf = push --force
+	gbid = "if() { git grep -inP '(?<![A-Za-z0-9_])'\"$1\"'(?![A-Za-z0-9_])' -- ':!*.pmm'; }; f"
 [push]
 	default = simple

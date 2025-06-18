@@ -14,6 +14,9 @@ set hlsearch
 let mapleader = "ù"
 let maplocalleader = ","
 
+" Learn VIM
+inoremap jk <esc>
+
 " Indentation
 set expandtab " on pressing tab, insert 4 spaces
 set shiftwidth=4
@@ -52,6 +55,7 @@ autocmd!
   autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
   autocmd FileType python     nnoremap <buffer> <localleader>c I#<esc>
   autocmd FileType c          nnoremap <buffer> <localleader>c I//<esc>
+  autocmd FileType ada        nnoremap <buffer> <localleader>c I--<esc>
 augroup END
 " }}}
 
